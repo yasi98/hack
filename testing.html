@@ -3,17 +3,49 @@
 <head>
 <title>Page Working??</title>
 <script type = "text/javascript" >
-function showCoords(event) {
-  var x = event.clientX;     // Get the horizontal coordinate
-  var y = event.clientY;     // Get the vertical coordinate
-  var coor = "X coords: " + x + ", Y coords: " + y;
-console.log(coor);
-}
+  function Coordinates(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  function showCoords(event) {
+    var x = event.clientX;     // Get the horizontal coordinate
+    var y = event.clientY;     // Get the vertical coordinate
+    var coor = "X coords: " + x + ", Y coords: " + y;
+    createArray();
+    alert(coor);
+  }
+  
+  function createArray() {
+     //create array that stores Coordinates object
+     //alert("test");
+     var coords = [];
+     //store coordinates of each node
+     var first = new Coordinates(213, 235);
+     for (i = 0; i < 4; i++) {
+         var temp = new Coordinates(first.x + i * 40, first.y);
+         coords.push(temp);
+     }
+     first = new Coordinates(54, 200);
+     for (j = 0; j < 2; j++) {
+          for(i = 0; i < 4; i++) {
+            var temp = new Coordinates(first.x + i * 40, first.y - j * 31);
+            coords.push(temp);
+          }
+     }
+
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+      myCanvas.width = 20;
+        myCanvas.height = 20;
+        myCanvas.style.left = "100px";
+        myCanvas.style.top = "100px";
+        myCanvas.style.position = "absolute";
+    }
+
 </script>
 <style>
 .imageWrapper {
     position: relative;
-    margin-top: 20%;
 }
 .overlayImage {
     position: absolute;
@@ -23,10 +55,13 @@ console.log(coor);
 </style>
 </head>
 <body>
-  <div class="imageWrapper">
-    <img onclick="showCoords(event)" class="overlayImage" src="Giedt.png" height="300" width= "400">
-    <!-- <img class="overlayImage" src="Giedt 1001.png" height="300" width= "400"> -->
+  <div class="imageWrapper" onclick="showCoords(event)">
+    <img  class="overlayImage" src="Giedt.png" height="300" width= "400" id="image">
+    <img class="overlayImage" src="Giedt 1001.png" height="300" width= "400">
+     <canvas id="myCanvas" class="overlayImage" width="5" height="5" style="border:1px solid #FF0000;">
+</canvas>
   </div>
+
 
 </body>
 </html>

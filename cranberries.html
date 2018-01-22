@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cranberries</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<style type="text/css">
-		.container {
-			padding-top: 20%;
-		}
-		.placeholder {
-
-		}
-	</style>
+	<title>Classroom Navigation</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="cranberries.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script type="text/javascript" src="cranberries.js"></script>
 </head>
 <body>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Classroom Navigation</h1>
+			<div class="row">
+		<div class="col-lg-12">
+			<div id="content">
+				<select id="opts" onchange="showForm()">
+					<option value="0">Choose Building</option>
+					<option value="1">Giedt</option>
+				</select>
+			<div id="f1" style="display:none">
+			<select id="room-num" onclick="placeholder()">
+    				<option value="0">Room Number</option>
+    				<option value="1">1001</option>
+    				<option value="2">1002</option>
+    				<option value="3">1003</option>  	
+			</select>
+			</div>
 
-<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div id="content">
-					<form>
-					  <div class="form-group">
-					    <label for="building-room">Enter destination:</label>
-					    <input type="text" name="search" placeholder="Wellman 204" required>
-					  </div>
-					  <button type="submit" class="btn btn-primary"><a href="cranberries2.html">Search</a></button>
-					</form>
-				</div>
 			</div>
 		</div>
 	</div>
-<!-- <div class="container">
-	<div class="jumbotron">
-		<form>
-		  <div class="form-group">
-		    <label for="building-room">Enter destination:</label>
-		    <input type="text" class="form-control" id="building-room" placeholder="Wellman 204">
-		  </div>
-		  <button type="submit" class="btn btn-primary">Search</button>
-		</form>
+	
 	</div>
-</div> -->
+	
+</div>
+
+
+
 </body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

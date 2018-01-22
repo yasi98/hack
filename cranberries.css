@@ -1,14 +1,27 @@
+body {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Ucdavis_logo_5_blue.png"), url("http://aggiepack.com/graphics/wallpaper/UCDavis_WP.jpg"); 
+/*	background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/1/13/UC_Davis_Aggies_logo.svg/1280px-UC_Davis_Aggies_logo.svg.png");*/
+	background-position: 18px 280px, center center;
+	background-size: 95%, auto;
+	background-repeat: no-repeat;
+}
+
 #content {
 	text-align: center;
+	/*margin-top: 20%;*/
 }
 
-input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+.jumbotron {
+	background: #ADA996;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	text-align: center;
+	/*background-color: grey !important;*/
+	font-family: 'Muli', sans-serif !important; 
+
 }
 
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-    width: 30%;
+img {
+	margin-left: 35%;
 }
